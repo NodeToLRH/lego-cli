@@ -1,0 +1,33 @@
+{
+  "name": "@lego-cli/core-cli",
+  "version": "1.0.0",
+  "description": "lego-cli core cli",
+  "author": "lrh21g <lingronghai@foxmail.com>",
+  "license": "ISC",
+  "homepage": "",
+  "main": "bin/index.js",
+  "bin": {
+    "lego-cli": "bin/index.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/core.test.js"
+  },
+  "dependencies": {
+    "@lego-cli/utils-get-npm-info": "workspace:*",
+    "@lego-cli/utils-log": "workspace:*",
+    "colors": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "import-local": "^3.1.0",
+    "minimist": "^1.2.8",
+    "path-exists": "^5.0.0",
+    "root-check": "^1.0.0",
+    "semver": "^7.5.4"
+  }
+}
