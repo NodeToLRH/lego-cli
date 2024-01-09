@@ -68,6 +68,10 @@ importers:
       semver:
         specifier: ^7.5.4
         version: 7.5.4
+    devDependencies:
+      commander:
+        specifier: ^11.1.0
+        version: 11.1.0
 
   packages/utils/get-npm-info:
     dependencies:
