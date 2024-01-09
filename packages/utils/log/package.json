@@ -4,7 +4,14 @@
   "description": "lego-cli utils log",
   "author": "lrh21g <lingronghai@foxmail.com>",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/NodeToLRH/lego-cli/packages/utils/log#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeToLRH/lego-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NodeToLRH/lego-cli/issues"
+  },
   "keywords": [
     "lego-cli",
     "utils",
