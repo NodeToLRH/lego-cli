@@ -1,0 +1,31 @@
+{
+  "name": "@lego-cli/utils-tools",
+  "version": "1.0.0",
+  "description": "lego-cli utils tools",
+  "author": "lrh21g <lingronghai@foxmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/NodeToLRH/lego-cli/packages/utils/tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeToLRH/lego-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NodeToLRH/lego-cli/issues"
+  },
+  "keywords": [
+    "lego-cli",
+    "utils",
+    "tools"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/tools.test.js"
+  }
+}
