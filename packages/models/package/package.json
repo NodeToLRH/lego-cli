@@ -1,0 +1,38 @@
+{
+  "name": "@lego-cli/models-package",
+  "version": "1.0.0",
+  "description": "lego-cli models package",
+  "author": "lrh21g <lingronghai@foxmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/NodeToLRH/lego-cli/packages/models/package#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeToLRH/lego-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NodeToLRH/lego-cli/issues"
+  },
+  "keywords": [
+    "lego-cli",
+    "models",
+    "package"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/package.test.js"
+  },
+  "dependencies": {
+    "@lego-cli/utils-get-npm-info": "workspace:*",
+    "@lego-cli/utils-tools": "workspace:*",
+    "fs-extra": "^11.2.0",
+    "npminstall": "^7.12.0",
+    "pkg-dir": "^5.0.0"
+  }
+}
