@@ -8,6 +8,7 @@ const semver = require('semver')
 const colors = require('colors/safe')
 const { Command } = require('commander')
 
+const exec = require('@lego-cli/core-exec')
 const log = require('@lego-cli/utils-log')
 
 const pkg = require('../package.json')
@@ -41,6 +42,15 @@ function registerCommand() {
     .helpOption('-h, --help', '显示命令帮助')
     .option('-d, --debug', '是否开启调试模式', false)
     .option('-tp, --targetPath <targetPath>', '是否指定本地调试文件路径', '')
+
+  // program.command : 配置命令
+  // > 第一个参数为命令名称。
+  // > 命令参数可以跟在名称后面，也可以用 .argument() 单独指定。参数可为必选的（尖括号表示）、可选的（方括号表示）或变长参数（点号表示，如果使用，只能是最后一个参数）。
+  // program.action : 命令处理函数。函数接收三个参数 name （该命令声明的所有参数）, options （解析出的选项）, command （该命令对象自身）
+  program
+    .command('init [projectName]')
+    .option('-f --force', '是否强制初始化项目')
+    .action(exec)
 
   // program.on : 监听命令和选项可以执行自定义函数。
   // 开启 debug 模式

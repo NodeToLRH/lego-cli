@@ -32,6 +32,7 @@
     "test": "node ./__tests__/core.test.js"
   },
   "dependencies": {
+    "@lego-cli/core-exec": "workspace:*",
     "@lego-cli/utils-get-npm-info": "workspace:*",
     "@lego-cli/utils-log": "workspace:*",
     "colors": "^1.4.0",
