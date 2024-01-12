@@ -22,9 +22,10 @@ async function core() {
     registerCommand()
   }
   catch (e) {
-    log.error(e.message)
-    if (program.debug)
-      console.log(e)
+    log.error('core catch error', e.message)
+
+    if (program.opts().debug)
+      log.error('core catch debug error', e)
   }
 }
 
@@ -36,16 +37,16 @@ function registerCommand() {
   program
     .name(Object.keys(pkg.bin)[0])
     .usage('<command> [options]')
-    .version(pkg.version, '-v, --vers', '输出当前版本')
+    .version(pkg.version, '-v, --version', '输出当前版本')
     .helpOption('-h, --help', '显示命令帮助')
-    .option('-d --debug', '是否开启调试模式', false)
-    .option('-tp --targetPath <targetPath>', '是否指定本地调试文件路径', '')
+    .option('-d, --debug', '是否开启调试模式', false)
+    .option('-tp, --targetPath <targetPath>', '是否指定本地调试文件路径', '')
 
   // program.on : 监听命令和选项可以执行自定义函数。
   // 开启 debug 模式
   program.on('option:debug', () => {
     // 判断是否开启 debug 模式，调整日志打印级别
-    if (program.debug)
+    if (program.opts().debug)
       process.env.LOG_LEVEL = 'verbose'
     else
       process.env.LOG_LEVEL = 'info'
@@ -55,7 +56,7 @@ function registerCommand() {
 
   // 指定 targetPath
   program.on('option:targetPath', () => {
-    process.env.CLI_TARGET_PATH = program.targetPath
+    process.env.CLI_TARGET_PATH = program.opts().targetPath
   })
 
   // 处理未知命令
@@ -63,10 +64,10 @@ function registerCommand() {
     // 获取可用命令
     const availableCommands = program.commands.map(cmd => cmd.name())
 
-    console.log(colors.red(`未知命令: ${obj[0]}`))
+    log.error(`未知命令: ${obj[0]}`)
 
     if (availableCommands.length > 0)
-      console.log(colors.red(`可用命令: ${availableCommands.join(',')}`))
+      log.info(colors.green(`可用命令: ${availableCommands.join(',')}`))
   })
 
   // program.parse : 解析字符串数组，也可以省略参数而使用 process.argv。
@@ -91,7 +92,7 @@ async function prepare() {
 
 // 检查当前版本
 function checkPkgVersion() {
-  log.info('cli', pkg.version)
+  log.info('cli version', pkg.version)
 }
 
 // 检查是否为 root 启动
