@@ -1,0 +1,31 @@
+{
+  "name": "@lego-cli/commands-init",
+  "version": "1.0.0",
+  "description": "lego-cli commands init",
+  "author": "lrh21g <lingronghai@foxmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/NodeToLRH/lego-cli/packages/commands/init#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeToLRH/lego-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NodeToLRH/lego-cli/issues"
+  },
+  "keywords": [
+    "lego-cli",
+    "commands",
+    "init"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/init.test.js"
+  }
+}
