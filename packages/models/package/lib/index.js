@@ -26,11 +26,13 @@ class Package {
     // package 的版本 version
     this.packageVersion = options.packageVersion
     // package 缓存目录的前缀
-    this.cacheFilePathPrefix = this.packageName.replace('/', '_')
+    // this.cacheFilePathPrefix = this.packageName.replace('/', '_')
+    this.cacheFilePathPrefix = this.packageName.replace('/', '+')
   }
 
   get cacheFilePath() {
-    return path.resolve(this.storeDir, `_${this.cacheFilePathPrefix}@${this.packageVersion}@${this.packageName}`)
+    // return path.resolve(this.storeDir, `_${this.cacheFilePathPrefix}@${this.packageVersion}@${this.packageName}`)
+    return path.resolve(this.storeDir, '.store', `${this.cacheFilePathPrefix}@${this.packageVersion}`, 'node_modules', `${this.packageName}`)
   }
 
   async prepare() {
@@ -73,7 +75,8 @@ class Package {
   }
 
   getSpecificCacheFilePath(packageVersion) {
-    return path.resolve(this.storeDir, `_${this.cacheFilePathPrefix}@${packageVersion}@${this.packageName}`)
+    // return path.resolve(this.storeDir, `_${this.cacheFilePathPrefix}@${packageVersion}@${this.packageName}`)
+    return path.resolve(this.storeDir, '.store', `${this.cacheFilePathPrefix}@${packageVersion}`, 'node_modules', `${this.packageName}`)
   }
 
   // 更新 Package
