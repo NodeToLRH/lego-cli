@@ -7,7 +7,9 @@ const { spawn } = require('node:child_process')
 const Package = require('@lego-cli/models-package')
 const log = require('@lego-cli/utils-log')
 
-const SETTINGS = {}
+const SETTINGS = {
+  init: 'lego-cli/commands-init',
+}
 
 const CACHE_DIR = 'dependencies'
 
@@ -16,9 +18,6 @@ async function exec(...args) {
   let targetPath = process.env.CLI_TARGET_PATH
   let storeDir = ''
   let pkg = null
-
-  log.verbose('exec targetPath', targetPath)
-  log.verbose('exec homePath', homePath)
 
   const cmdObj = args[args.length - 1]
   const cmdName = cmdObj.name()
@@ -29,6 +28,7 @@ async function exec(...args) {
     targetPath = path.resolve(homePath, CACHE_DIR)
     storeDir = path.resolve(targetPath, 'node_modules')
 
+    log.verbose('exec homePath', homePath)
     log.verbose('exec targetPath', targetPath)
     log.verbose('exec storeDir', storeDir)
 
@@ -40,12 +40,18 @@ async function exec(...args) {
     })
 
     const isPkgExists = await pkg.exists()
-    if (isPkgExists)
+    if (isPkgExists) {
+      log.verbose('exec package update')
       await pkg.update() // 更新 package
-    else
+    }
+    else {
+      log.verbose('exec package install')
       await pkg.install() // 安装 package
+    }
   }
   else {
+    log.verbose('exec targetPath', targetPath)
+
     pkg = new Package({
       targetPath,
       packageName,
