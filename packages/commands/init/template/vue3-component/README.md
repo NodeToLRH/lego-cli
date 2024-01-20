@@ -1,0 +1,4 @@
+# <%= name %>
+
+> <%= className %>@<%= version %>
+<%= description %>

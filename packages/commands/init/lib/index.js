@@ -269,7 +269,7 @@ class InitCommand extends Command {
     const targetPath = process.cwd()
 
     try {
-      const templateDir = path.resolve(__filename, '../..', `template-${npmName}`)
+      const templateDir = path.resolve(__filename, '../..', `template`, `${npmName}`)
 
       fse.ensureDirSync(templateDir)
       fse.ensureDirSync(targetPath)
