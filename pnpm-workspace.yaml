@@ -3,3 +3,4 @@ packages:
   - 'packages/core/**'
   - 'packages/models/**'
   - 'packages/utils/**'
+  - '!packages/commands/init/template-**/**'
