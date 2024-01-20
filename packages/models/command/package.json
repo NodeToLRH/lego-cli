@@ -1,0 +1,36 @@
+{
+  "name": "@lego-cli/models-command",
+  "version": "1.0.0",
+  "description": "lego-cli models command",
+  "author": "lrh21g <lingronghai@foxmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/NodeToLRH/lego-cli/packages/models/command",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeToLRH/lego-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NodeToLRH/lego-cli/issues"
+  },
+  "keywords": [
+    "lego-cli",
+    "models",
+    "command"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/command.test.js"
+  },
+  "dependencies": {
+    "@lego-cli/utils-log": "workspace:*",
+    "colors": "^1.4.0",
+    "semver": "^7.5.4"
+  }
+}
