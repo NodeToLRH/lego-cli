@@ -52,6 +52,11 @@ function registerCommand() {
     .option('-f --force', '是否强制初始化项目')
     .action(exec)
 
+  program
+    .command('add [templateName]')
+    .option('-f --force', '是否强制添加代码')
+    .action(exec)
+
   // program.on : 监听命令和选项可以执行自定义函数。
   // 开启 debug 模式
   program.on('option:debug', () => {

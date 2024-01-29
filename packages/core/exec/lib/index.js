@@ -8,7 +8,8 @@ const Package = require('@lego-cli/models-package')
 const log = require('@lego-cli/utils-log')
 
 const SETTINGS = {
-  init: 'lego-cli/commands-init',
+  init: '@lego-cli/commands-init',
+  add: '@lego-cli/commands-add',
 }
 
 const CACHE_DIR = 'dependencies'
