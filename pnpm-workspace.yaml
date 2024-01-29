@@ -4,3 +4,4 @@ packages:
   - 'packages/models/**'
   - 'packages/utils/**'
   - '!packages/commands/init/template/**'
+  - '!packages/commands/add/template/**'
