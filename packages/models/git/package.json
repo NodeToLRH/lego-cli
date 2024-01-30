@@ -1,0 +1,44 @@
+{
+  "name": "@lego-cli/models-git",
+  "version": "1.0.0",
+  "description": "lego-cli models git",
+  "author": "lrh21g <lingronghai@foxmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/NodeToLRH/lego-cli/packages/models/git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeToLRH/lego-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NodeToLRH/lego-cli/issues"
+  },
+  "keywords": [
+    "lego-cli",
+    "models",
+    "git"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/git.test.js"
+  },
+  "dependencies": {
+    "@lego-cli/models-cloudbuild": "workspace:*",
+    "@lego-cli/utils-log": "workspace:*",
+    "@lego-cli/utils-tools": "workspace:*",
+    "axios": "^1.6.3",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.6",
+    "listr": "^0.14.3",
+    "rxjs": "^7.8.1",
+    "semver": "^7.5.4",
+    "simple-git": "^3.22.0",
+    "terminal-link": "^3.0.0"
+  }
+}
