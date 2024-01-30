@@ -1,0 +1,38 @@
+{
+  "name": "@lego-cli/models-cloudbuild",
+  "version": "1.0.0",
+  "description": "lego-cli models cloudbuild",
+  "author": "lrh21g <lingronghai@foxmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/NodeToLRH/lego-cli/packages/models/cloudbuild",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeToLRH/lego-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NodeToLRH/lego-cli/issues"
+  },
+  "keywords": [
+    "lego-cli",
+    "models",
+    "cloudbuild"
+  ],
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/cloudbuild.test.js"
+  },
+  "dependencies": {
+    "@lego-cli/utils-log": "workspace:*",
+    "axios": "^1.6.3",
+    "inquirer": "^8.2.6",
+    "lodash": "^4.17.21",
+    "socket.io-client": "^4.7.4"
+  }
+}
