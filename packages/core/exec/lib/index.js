@@ -10,6 +10,7 @@ const log = require('@lego-cli/utils-log')
 const SETTINGS = {
   init: '@lego-cli/commands-init',
   add: '@lego-cli/commands-add',
+  publish: '@lego-cli/commands-publish',
 }
 
 const CACHE_DIR = 'dependencies'

@@ -57,6 +57,18 @@ function registerCommand() {
     .option('-f --force', '是否强制添加代码')
     .action(exec)
 
+  program
+    .command('publish')
+    .option('--refreshServer', '强制更新远程Git仓库')
+    .option('--refreshToken', '强制更新远程仓库token')
+    .option('--refreshOwner', '强制更新远程仓库类型')
+    .option('--buildCmd <buildCmd>', '构建命令')
+    .option('--prod', '是否正式发布')
+    .option('--sshUser <sshUser>', '模板服务器用户名')
+    .option('--sshIp <sshIp>', '模板服务器IP或域名')
+    .option('--sshPath <sshPath>', '模板服务器上传路径')
+    .action(exec)
+
   // program.on : 监听命令和选项可以执行自定义函数。
   // 开启 debug 模式
   program.on('option:debug', () => {
