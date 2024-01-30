@@ -1,1 +1,1 @@
-# `@lego-cli/commands-init`
+# `@lego-cli/commands-add`
