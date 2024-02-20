@@ -70,7 +70,7 @@ class Git {
     sshPath = '',
   }) {
     if (name.startsWith('@') && name.indexOf('/') > 0) {
-      // @lego-cli/component-test -> lego-cli-_component-test
+      // @lego-cli/component-test -> lego-cli_component-test
       const nameArray = name.split('/')
       this.name = nameArray.join('_').replace('@', '')
     }
@@ -746,7 +746,7 @@ pnpm-debug.log*
   async uploadComponentToNpm() {
     if (this.isComponent()) {
       log.info('开始发布至 npm ...')
-      require('node:child_process').execSync('npm publish', { cwd: this.dir })
+      require('node:child_process').execSync('pnpm publish', { cwd: this.dir })
       log.success('发布至 npm 成功！')
     }
   }
