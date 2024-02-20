@@ -1,11 +1,1 @@
-# `command`
-
-> TODO: description
-
-## Usage
-
-```
-const command = require('command');
-
-// TODO: DEMONSTRATE API
-```
+# `@lego-cli/models-command`
