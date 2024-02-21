@@ -23,10 +23,16 @@
 
 ![core-exec 模块](./docs/架构设计/core-exec.drawio.png)
 
+### 脚手架命令模块
+
 #### commands-init 模块
 
 ![commands-init 模块](./docs/架构设计/commands-init.drawio.png)
 
 #### commands-add 模块
 
+![commands-add 模块](./docs/架构设计/commands-add.drawio.png)
+
 #### commands-publish 模块
+
+![commands-publish 模块](./docs/架构设计/commands-publish.drawio.png)
